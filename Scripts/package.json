@@ -11,7 +11,7 @@
   },
   "author": "vfa-trinn",
   "dependencies": {
-  	"com.neuecc.unirx": "https://github.com/neuecc/UniRx.git?path=Assets/Plugins/UniRx/Scripts"
+  	"com.neuecc.unirx": "7.1.0"
   },
   "keywords": [
     "udl"
