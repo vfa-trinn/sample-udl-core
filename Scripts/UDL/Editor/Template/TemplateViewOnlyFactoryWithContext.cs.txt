@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UniRx;
+using UDL.Core;
+
+namespace Project.#NAMESPACE#
+{
+    using View;
+   
+    public class #BASENAME#Context
+    {
+        public #BASENAME#Context()
+        {
+        }
+    }
+
+    public class #BASENAME#Factory
+    {
+        #BASENAME#Context context;
+
+        public #BASENAME#Factory(#BASENAME#Context context)
+        {
+            this.context = context;
+        }
+
+        public IModel Instantiate()
+        {
+            #BASENAME#View view = Create#BASENAME#View();
+            view.SetContext(context);
+            return view;
+        }
+
+        public static #BASENAME#View Create#BASENAME#View()
+        {
+            return Theater.Load<#BASENAME#View>("Prefabs/#PATH#/#BASENAME#View");
+        }
+    }
+}

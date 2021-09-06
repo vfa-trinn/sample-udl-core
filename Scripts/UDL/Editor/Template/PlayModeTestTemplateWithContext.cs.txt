@@ -1,0 +1,25 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using NUnit.Framework;
+using UnityEngine;
+using UnityEngine.TestTools;
+
+namespace Project.#NAMESPACE#
+{
+    public class #BASENAME#Test
+    {
+        [UnityTest]
+        public IEnumerator Factory()
+        {
+            var screen = new #BASENAME#Factory(new #BASENAME#Context()).Instantiate();
+            yield return new WaitForSeconds(5);
+        }
+
+        [UnityTest]
+        public IEnumerator View()
+        {
+            var view = #BASENAME#Factory.Create#BASENAME#View();
+            yield return new WaitForSeconds(5);
+        }
+    }
+}

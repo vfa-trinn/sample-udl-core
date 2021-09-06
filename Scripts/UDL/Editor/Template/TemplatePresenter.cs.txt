@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UniRx;
+using UDL.Core;
+
+namespace Project.#NAMESPACE#.Presenter
+{
+    using Model;
+    using View;
+
+    public class #BASENAME#Presenter : AbstractPresenter
+    {
+        public #BASENAME#Presenter(#BASENAME#Model model, #BASENAME#View view) : base(model, view)
+        {
+        }
+    }
+}

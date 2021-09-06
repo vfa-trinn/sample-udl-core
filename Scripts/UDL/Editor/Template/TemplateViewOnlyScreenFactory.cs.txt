@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UniRx;
+using UDL.Core;
+
+namespace Project.#NAMESPACE#
+{
+    using View;
+
+    public class #BASENAME#Factory : IScreenFactory
+    {
+        public bool History => false;
+
+        public #BASENAME#Factory()
+        {
+        }
+
+        public IModel Instantiate()
+        {
+            #BASENAME#View view = Create#BASENAME#View();
+            return view;
+        }
+
+        public static #BASENAME#View Create#BASENAME#View()
+        {
+            return ScreenLoader.Load<#BASENAME#View>("Prefabs/#PATH#/#BASENAME#View", 3);
+        }
+    }
+}

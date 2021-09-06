@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UniRx;
+using UDL.Core;
+
+namespace Project.#NAMESPACE#
+{
+    using Model;
+    using Presenter;
+    using View;
+   
+    public class #BASENAME#Context
+    {
+        public #BASENAME#Context()
+        {
+        }
+    }
+
+    public class #BASENAME#Factory
+    {
+        #BASENAME#Context context;
+
+        public #BASENAME#Factory(#BASENAME#Context context)
+        {
+            this.context = context;
+        }
+
+        public IModel Instantiate()
+        {
+            #BASENAME#View view = Create#BASENAME#View();
+            #BASENAME#Model model = new #BASENAME#Model(context);
+
+            new #BASENAME#Presenter(model, view).AddTo(model.disposables);
+
+            return model;
+        }
+
+        public static #BASENAME#View Create#BASENAME#View()
+        {
+            return Theater.Load<#BASENAME#View>("Prefabs/#PATH#/#BASENAME#View");
+        }
+    }
+}

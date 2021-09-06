@@ -1,0 +1,28 @@
+public enum SoundLocalKey 
+{
+	None = -1,
+	ChestCreak = 5,
+	CoinRattle = 8,
+	CrossbowShot = 11,
+	CrystalFragment = 7,
+	DeathExplosion = 0,
+	DropExperience = 3,
+	DropHop = 9,
+	GetGear = 18,
+	Hit = 2,
+	HPHeal = 4,
+	RewardScreen = 19,
+	SoilFootStep1 = 15,
+	SoilFootStep2 = 16,
+	SoilFootStep3 = 17,
+	SwordSwing = 10,
+	WaterFootStep1 = 12,
+	WaterFootStep2 = 13,
+	WaterFootStep3 = 14,
+	Whoosh = 1,
+    DeleteCard = 18,
+    CardDealButton = 19,
+    RemoveCard = 20,
+    SelectCard = 21,
+
+}
